@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sidebar */
+.overlay {
+    position: relative; 
+}
+
+/* 1024 -1 so it doesnt show when it hits 1024px */
+@media only screen and (max-width: 1023px) {
+    .overlay:after {
+        content: " ";
+        z-index: 29;
+        display: block;
+        height: 100%;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        position: fixed;
+    }
+}
+
+/* Admin Panel - Create/Edit post forms */
+.post-editor {	
+    padding: 4px 7px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    color: #4a5568;
+    background-color: #fff;
+    background-image: none;
+    z-index:  -1;
+}
+.post-editor:hover {
+    border: 1px solid #57a3f3;
+}
+.input-field {
+    margin: 20px auto 0;
+    max-width: 750px;
+}
+
+/* Admin Panel - Image Upload classes */
+.img-upload{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    margin-right: 4px;
+	}
+	.img-upload img{
+		width: 100%;
+		height: 100%;
+	}
+	.img-upload-cover{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+	}
+	.img-upload:hover .img-upload-cover{
+		display: block;
+	}
+	.img-upload-cover i{
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
+		margin: 0 2px;
+	}

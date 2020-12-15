@@ -5,7 +5,7 @@
       <div class="flex">
         <div class="px-4 items-center">
           <router-link to='/'>
-            <p class="font-semibold text-lg sm:text-2xl text-blue-400">&lt;&nbsp;DevBlog&nbsp;&gt;</p>
+            <p class="font-semibold text-lg sm:text-2xl text-blue-500">&lt;&nbsp;DevBlog&nbsp;&gt;</p>
           </router-link>
         </div>
       </div>

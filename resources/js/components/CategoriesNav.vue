@@ -10,7 +10,7 @@
     <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto overflow-x-auto">
         <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-4">
             <router-link :to="`/category/${c.categoryName}/${c.id}`" class="flex text-blue-700 text-sm font-bold uppercase px-4 mx-2 py-2 sm:pb-0" v-for="(c, i) in getCategories" :key="i"> 
-                <img class="w-6 h-6 object-cover rounded-full mx-1 shadow" :src="c.iconImage" alt="category-icon">
+                <img class="w-6 h-6 object-cover rounded-full mx-1 shadow" :src="c.iconImage" alt="">
                 <span class="inline-block pt-1">{{c.categoryName}}</span>
             </router-link>
         </div>

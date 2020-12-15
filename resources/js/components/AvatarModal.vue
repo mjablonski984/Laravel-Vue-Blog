@@ -19,7 +19,7 @@
             :on-exceeded-size="handleMaxSize"
             action="/app/upload">
             <div class="py-5">
-                <Icon type="ios-cloud-upload" size="52" class="text-blue-400"></Icon>
+                <Icon type="ios-cloud-upload" size="52" class="text-blue-500"></Icon>
                 <p>Click or drag files here to upload</p>
             </div>
         </Upload>

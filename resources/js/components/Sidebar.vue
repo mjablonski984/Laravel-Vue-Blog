@@ -6,7 +6,7 @@
     >
         <div class="w-full h-20 border-b flex px-4 items-center mb-8">
             <router-link to='/'>
-                <p class="font-semibold text-lg sm:text-2xl text-blue-400 pl-4">&lt;&nbsp;DevBlog&nbsp;&gt;</p>
+                <p class="font-semibold text-lg sm:text-2xl text-blue-500 pl-4">&lt;&nbsp;DevBlog&nbsp;&gt;</p>
             </router-link>
         </div>
 
@@ -14,7 +14,7 @@
             <p class="pl-4 text-sm font-semibold mb-1">MAIN</p>
            
             <div v-for="(permission, i) in getUserPermission" :key="i" v-if="getUserPermission.length && permission.read"
-                class="w-full flex items-center text-blue-400 h-10 pl-4 rounded-lg cursor-pointer mb-2"
+                class="w-full flex items-center text-blue-500 h-10 pl-4 rounded-lg cursor-pointer mb-2"
                 :class="[($route.path == permission.name) ? 'bg-gray-200' : '' ]"> 
                 <Icon :type="(icon.resource == permission.resourceName) ? icon.type : null" size="24" v-for="(icon) in icons " :key="icon.resource"/>
                 <router-link :to="permission.name" class="text-gray-700 text-base pl-4 w-full" >{{permission.resourceName}}</router-link>

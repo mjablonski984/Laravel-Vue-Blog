@@ -27,7 +27,7 @@
 				:on-exceeded-size="handleMaxSize"
 				action="/app/upload">
 				<div class="py-3">
-					<Icon type="ios-cloud-upload" size="22" class="text-blue-400"></Icon>
+					<Icon type="ios-cloud-upload" size="22" class="text-blue-500"></Icon>
 					<p class="text-gray-400">Upload cover image</p>
 				</div>
 			</Upload>

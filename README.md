@@ -33,3 +33,8 @@ In .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASS
 ```
 php artisan migrate
 ```
+
+8. Seed the database:
+```
+php artisan db:seed --class=DatabaseSeeder
+```

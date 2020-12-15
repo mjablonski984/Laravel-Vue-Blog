@@ -24,7 +24,7 @@
 				<tbody class="bg-gray-200">
 					<tr class="bg-white border-4 border-gray-200" v-for="(category, i) in getCategories" :key="i" v-if="getCategories.length">
 						<td class="px-3 break-all py-2 flex flex-row items-center hidden sm:block">
-							<img class="h-10 w-10 rounded-full object-cover " :src="category.iconImage" alt="icon"/>
+							<img class="h-10 w-10 rounded-full object-cover " :src="category.iconImage" alt=""/>
 						</td>
 						<td class="px-3 break-all py-2">
 							<span>{{category.id}}</span>
@@ -69,7 +69,7 @@
 				:on-exceeded-size="handleMaxSize"
 				action="/app/upload">
 				<div class="py-5">
-					<Icon type="ios-cloud-upload" size="52" class="text-blue-400"></Icon>
+					<Icon type="ios-cloud-upload" size="52" class="text-blue-500"></Icon>
 					<p>Click or drag files here to upload</p>
 				</div>
 			</Upload>
@@ -105,7 +105,7 @@
 				action="/app/upload">
 
 				<div class="py-5">
-					<Icon type="ios-cloud-upload" size="52" class="text-blue-400"></Icon>
+					<Icon type="ios-cloud-upload" size="52" class="text-blue-500"></Icon>
 					<p>Click or drag files here to upload</p>
 				</div>
 			</Upload>

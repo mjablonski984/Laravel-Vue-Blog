@@ -3,10 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="manifest" href="/icons/site.webmanifest">
+        <!-- Main css file -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">    
-        <title>Laravel Blog</title>
+        <title>DevBlog</title>
         <script>
-        // Generate crsf token (used in forms to prevent 419 error)
+        // Generate crsf token (used in forms to prevent laravel 419 error)
            (function () {
                window.Laravel = {
                    csrfToken: '{{ csrf_token() }}'

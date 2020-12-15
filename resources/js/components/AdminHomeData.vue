@@ -35,7 +35,7 @@
                 <p class="text-xl font-semibold mb-4">Stats</p>
 
             <div class="w-full">
-                <div class="w-full bg-white border text-blue-400 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
+                <div class="w-full bg-white border text-blue-500 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
                     <Icon type="ios-list-box-outline" size="50" color="#63b3ed"/>
                     <div class="text-gray-700 pl-4">
                         <p class="font-semibold text-3xl">{{getAllPosts.length}}</p>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <div class="w-full bg-white border text-blue-400 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
+                <div class="w-full bg-white border text-blue-500 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
                     <Icon type="ios-paper-outline" size="50" color="#63b3ed"/>
                     <div class="text-gray-700 pl-4">
                         <p class="font-semibold text-3xl">{{getUsersPosts().length}}</p>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <div class="w-full bg-white border text-blue-400 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
+                <div class="w-full bg-white border text-blue-500 rounded-lg flex items-center p-6 mb-2 xl:mb-10">
                     <Icon type="ios-people-outline" size="50" color="#63b3ed"/>
                     <div class="text-gray-700 pl-4">
                         <p class="font-semibold text-3xl">{{getUsers.length}}</p>

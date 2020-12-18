@@ -26,5 +26,9 @@
         "vue-editor-js": "^1.1.1",
         "vue-router": "^3.4.9",
         "vuex": "^3.5.1"
+    },
+    "engines": {
+        "node": "12.x"
     }
+
 }

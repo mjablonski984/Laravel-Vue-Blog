@@ -17,7 +17,7 @@
 					<th class="px-3 py-2 hidden md:table-cell"><span class="text-gray-300">Id</span></th>
 					<th class="px-3 py-2"><span class="text-gray-300">Email</span></th>
 					<th class="px-3 py-2"><span class="text-gray-300">Role</span></th>
-					<th class="px-2 py-2 w-5"><span class="text-gray-300">Actions</span></th>
+					<th class="px-2 py-2 w-5" v-if="isUpdatePermitted || isDeletePermitted"><span class="text-gray-300">Actions</span></th>
 				</tr>
 				</thead>
 				<tbody class="bg-gray-200">
@@ -41,7 +41,7 @@
 					<td class="px-3 break-all py-2">
 					<span v-for="(r, i) in getRoles" :key="i" v-if="r.id == user.role_id">{{r.roleName}}</span>
 					</td>
-					<td class="px-2 break-all py-2 w-5">
+					<td class="px-2 break-all py-2 w-5"  v-if="isUpdatePermitted || isDeletePermitted">
 						<Button class="w-full" size="small" @click="showEditModal(user, i)" v-if="isUpdatePermitted">
 							<Icon type="md-create" />&nbsp;&nbsp;Edit&nbsp;&nbsp;
 						</Button>					
@@ -61,16 +61,16 @@
 			:mask-closable="false"
 			:closable="false"
 			>
-			<div class="space">
+			<div class="pt-4">
 				<Input type="text" v-model="data.name" placeholder="Full name"  />
 			</div>
-			<div class="space">
+			<div class="pt-4">
 				<Input type="email" v-model="data.email" placeholder="Email"  />
 			</div>
-			<div class="space">
+			<div class="pt-4">
 				<Input type="password" v-model="data.password" placeholder="Password"  />
 			</div>
-			<div class="space">
+			<div class="pt-4">
 				<Select v-model="data.role_id"  placeholder="Select user type">
 					<Option :value="r.id" v-for="(r, i) in getRoles" :key="i" v-if="getRoles.length">{{r.roleName}}</Option>
 				</Select>
@@ -88,16 +88,16 @@
 			:mask-closable="false"
 			:closable="false"
 			>
-			<div class="space">
+			<div class="pt-4">
 				<Input type="text" v-model="editData.name" placeholder="Full name"  />
 			</div>
-			<div class="space">
+			<div class="pt-4" v-show="getUser.id == editData.id">
 				<Input type="email" v-model="editData.email" placeholder="Email"  />
 			</div>
-			<div class="space">
+			<div class="pt-4" v-show="getUser.id == editData.id">
 				<Input type="password" v-model="editData.password" placeholder="Password"  />
 			</div>
-			<div class="space">
+			<div class="pt-4">
 				<Select v-model="editData.role_id"  placeholder="Select user type">
 					<Option :value="r.id" v-for="(r, i) in getRoles" :key="i" v-if="getRoles.length">{{r.roleName}}</Option>						
 				</Select>
@@ -241,7 +241,7 @@ export default {
 		}
 	}, 
 	computed : {
-		...mapGetters(['getDeleteModalObj','getUsers','getRoles','getUserPermission'])
+		...mapGetters(['getDeleteModalObj','getUser','getUsers','getRoles','getUserPermission'])
     },
     watch : {
 		getDeleteModalObj(obj){

@@ -17,6 +17,7 @@
           <div class="mt-4 items-center justify-between w-full">
             <Button class="w-full" type="primary" @click="login" :disabled="isLogging" :loading="isLogging">{{isLogging ? 'Loging...' : 'Login'}}</Button>
           </div>
+          <p class="font-semibold text-small gray-800 text-center pt-4">Test User: test@test.com Password: password</p>
         </form>
       </div>
     </div>

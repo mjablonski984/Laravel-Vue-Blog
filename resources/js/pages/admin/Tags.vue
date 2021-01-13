@@ -18,7 +18,7 @@
 				<th class="px-3 py-2"><span class="text-gray-300">Id</span></th>
 				<th class="px-3 py-2"><span class="text-gray-300">Name</span></th>
 				<th class="px-3 py-2 hidden md:table-cell"><span class="text-gray-300">Created at</span></th>					
-				<th class="px-2 py-2 w-5"><span class="text-gray-300">Actions</span></th>
+				<th class="px-2 py-2 w-5" v-show="isUpdatePermitted || isDeletePermitted"><span class="text-gray-300">Actions</span></th>
 			</tr>
 			</thead>
 			<tbody class="bg-gray-200">
@@ -37,7 +37,7 @@
 					<td class="px-3 break-all py-2 hidden md:table-cell">
 						<span>{{new Date(tag.created_at).toLocaleDateString()}}</span>
 					</td>
-					<td class="px-2 break-all py-2 w-5">
+					<td class="px-2 break-all py-2 w-5" v-show="isUpdatePermitted || isDeletePermitted">
 						<Button class="w-full" size="small" @click="showEditModal(tag, i)"  v-if="isUpdatePermitted">
 							<Icon type="md-create" />&nbsp;&nbsp;Edit&nbsp;&nbsp;
 						</Button>					

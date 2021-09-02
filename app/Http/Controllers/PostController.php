@@ -8,6 +8,7 @@ use App\Models\PostTag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -47,7 +48,7 @@ class PostController extends Controller
         try {
             $post = Post::create([
                 'title' => $request->title,
-                'slug' => $request->title,
+                'slug' => Str::slug($request->title,'-'),
                 'post' => $request->post, 
                 'postExcerpt' => $request->postExcerpt,
                 'user_id' => Auth::user()->id,
@@ -110,7 +111,7 @@ class PostController extends Controller
         try {
             Post::where('id', $id)->update([
                 'title' => $request->title,
-                'slug' => $request->title,
+                'slug' => Str::slug($request->title,'-'),
                 'post' => $request->post,
                 'postExcerpt' => $request->postExcerpt,
                 'metaDescription' => $request->metaDescription,
